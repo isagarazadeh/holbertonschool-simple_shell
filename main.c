@@ -26,7 +26,7 @@ if (getline(&input_line, &buffer_size, stdin) == -1)
 free(input_line);
 break;
 }
-tokenized_input = tokenize_string(input_line);
+tokenized_input = str_tokens(input_line);
 if (!tokenized_input)
 {
 free(input_line);
