@@ -21,7 +21,7 @@ return (0);
 
 execve(command_tokens[0], command_tokens, environment);
 
-// Executable not found, try to find it in the PATH variable
+/* Executable not found, try to find it in the PATH variable */
 path_variable = get_path(environment);
 full_executable_path = split_path(command_tokens[0], path_variable);
 
@@ -32,12 +32,10 @@ char *original_executable_name = command_tokens[0];
 command_tokens[0] = full_executable_path;
 execve(command_tokens[0], command_tokens, environment);
 
-// Restore the original executable name in case execve fails
 command_tokens[0] = original_executable_name;
 free(full_executable_path);
 }
 
-// Handle the case where the executable is not found
 if (command_tokens != NULL && *command_tokens != NULL)
 {
 write(1, shell_name, _strlen(shell_name));
