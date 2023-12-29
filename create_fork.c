@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * create_fork - create_fork.
- * @_shell: shell_name.
- * @cmd_tokens: command_tokens.
+ * create_fork - create fork.
+ * @_shell: shell name.
+ * @cmd_tokens: command tokens.
  * @env: environment.
  * @is_terminal: terminal
  * Return: anythin.
