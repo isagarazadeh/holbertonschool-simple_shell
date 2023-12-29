@@ -1,0 +1,43 @@
+.\" Manpage for Simple Shell's Project for Holberton.
+.\" Contact to correct errors or typos.
+.TH HSH 1 "08 Dec 2022" "1.0" "Simple Shell's Manual"
+.hy
+.SH NAME
+_hsh \- a simple shell, UNIX command line interpreter
+
+.SH SYNOPSIS
+.IP "Interactive Mode:" 0.4i
+.BI "./hsh [command] [argument...]"
+
+.IP "Non-Interactive Mode:"
+.br
+.BI "echo [command] [arguments...] | ./hsh"
+
+.SH DESCRIPTION
+The hsh is a command language interpreter that execute commands from a command line string, the standard input, or a specified file. It handle the PATH.
+
+.SH BUILT-IN
+.IP "The hsh interpreter implement the following built-ins:" 0.4i
+env \- prints the current environment
+.br
+exit \- exit the shell
+.br
+
+.SH EXAMPLES
+.IP "Interactive Mode:" 0.4i
+.B "./hsh"
+.br
+.B "$ ls -l -a"
+
+.IP "Non-Interactive Mode:"
+.br
+.B "echo "ls -l -a" | ./hsh"
+
+.SH BUGS
+Return value always 0, exit usual codes do not apply. 
+
+.SH SEE ALSO
+sh(1)
+
+.SH AUTHOR
+Nihad Gurbanov and Isa Garazadeh
