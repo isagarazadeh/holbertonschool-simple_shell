@@ -35,19 +35,16 @@ break;
 special_command = special_cases(tokenized_input, argv[0], envp);
 if (special_command == 0)
 {
-free(input_line);
-free(tokenized_input);
+free(input_line), free(tokenized_input);
 return (EXIT_SUCCESS);
 }
 else if (special_command == 1)
 {
-free(input_line);
-free(tokenized_input);
+free(input_line), free(tokenized_input);
 continue;
 }
 exit_status = create_fork(argv[0], tokenized_input, envp, is_terminal);
-free(input_line);
-free(tokenized_input);
+free(input_line), free(tokenized_input);
 }
 return (EXIT_SUCCESS);
 }
