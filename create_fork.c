@@ -17,12 +17,12 @@ child_pid = fork();
 if (child_pid == -1)
 {
 perror("Fork Error:");
-return (0);
+return (1);
 }
 else if (child_pid == 0)
 {
 if (!cmd_tokens || !cmd_tokens[0])
-return (0);
+return (1);
 execve(cmd_tokens[0], cmd_tokens, env), path_variable = get_path(env);
 full_executable_path = split_path(cmd_tokens[0], path_variable);
 if (full_executable_path != NULL && path_variable != NULL)
@@ -42,10 +42,10 @@ write(1, ": 1: ", 5);
 write(1, cmd_tokens[0], _strlen(cmd_tokens[0])), write(1, ": not found\n", 12);
 }
 }
-return (0);
+return (1);
 }
 wait(&status);
 if (WIFEXITED(status))
 	status = WEXITSTATUS(status);
-return (1);
+return (status);
 }

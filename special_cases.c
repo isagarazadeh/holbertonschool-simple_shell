@@ -44,4 +44,3 @@ int special_cases(char **tokens, char *shell_name, char **environment)
 	}
 	return (2);
 }
-

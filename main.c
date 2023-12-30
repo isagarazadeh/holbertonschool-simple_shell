@@ -11,9 +11,9 @@ int main(__attribute__((unused)) int argc, char **argv, char **envp)
 {
 	size_t buffer_size;
 	char *input_line, **tokenized_input = NULL;
-	int is_terminal, special_command, exit_status = 1;
+	int is_terminal, special_command, exit_status = 0;
 
-	while (exit_status)
+	while (1)
 	{
 		buffer_size = 100, input_line = NULL;
 		is_terminal = isatty(0);
@@ -34,7 +34,7 @@ int main(__attribute__((unused)) int argc, char **argv, char **envp)
 		if (special_command == 0)
 		{
 			free(input_line), free(tokenized_input);
-			return (EXIT_SUCCESS);
+			return (exit_status);
 		}
 		else if (special_command == 1)
 		{
@@ -48,5 +48,5 @@ int main(__attribute__((unused)) int argc, char **argv, char **envp)
 		}
 		free(input_line), free(tokenized_input);
 	}
-	return (EXIT_SUCCESS);
+	return (exit_status);
 }
