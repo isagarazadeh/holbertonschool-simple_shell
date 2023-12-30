@@ -35,11 +35,15 @@ if (cmd_tokens != NULL && *cmd_tokens != NULL)
 {
 write(1, _shell, _strlen(_shell));
 if (is_terminal)
+{
 write(1, ": No such file or directory\n", 28);
+return (127);
+}
 else
 {
 write(1, ": 1: ", 5);
 write(1, cmd_tokens[0], _strlen(cmd_tokens[0])), write(1, ": not found\n", 12);
+return (127);
 }
 }
 return (1);
