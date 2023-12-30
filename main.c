@@ -2,7 +2,9 @@
 
 /**
  * main - Runs the shell.
- *
+ * @argc: number of arguments
+ * @argv: an array of C-style strings
+ * @envp: initialism for parameter
  * Return: Exit status 0
  */
 int main(__attribute__((unused)) int argc, char **argv, char **envp)

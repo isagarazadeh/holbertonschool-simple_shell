@@ -2,7 +2,7 @@
 
 /**
  * get_path - Get the PATH string from the environment
- * @env: Environment list with variables
+ * @environment: Environment list with variables
  * Return: Pointer to the string with all directories
  * in the 'PATH' string
  */
