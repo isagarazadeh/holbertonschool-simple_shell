@@ -8,8 +8,7 @@
  * @shell_name: Name of the executable of this program
  * @environment: Shell environment of this program
  *
- * Return: 0 if the shell should exit,
- * 1 if the shell should continue,
+ * Return: 0 if the shell should exit, 1 if the shell should continue,
  * 2 if neither
  */
 int special_cases(char **tokens, char *shell_name, char **environment)
