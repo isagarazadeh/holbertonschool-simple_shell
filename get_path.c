@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * get_path - Get the PATH string from the environment
- * @environment: Environment list with variables
- * Return: Pointer to the string with all directories
- * in the 'PATH' string
+ * get_path - Retrieves the PATH environment variable.
+ * @environment: The array of strings representing the environment variables.
+ * Return: A string containing the PATH variable.
  */
 char *get_path(char **environment)
 {
