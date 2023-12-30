@@ -1,11 +1,13 @@
 #include "main.h"
+
 /**
- * create_fork - create_fork.
- * @_shell: shell_name.
- * @cmd_tokens: command_tokens.
- * @env: environment.
- * @is_terminal: terminal
- * Return: anythin.
+ * create_fork - Creates a new process to execute a command.
+ *
+ * @_shell: The name of the shell program.
+ * @cmd_tokens: An array of strings representing the command and its arguments.
+ * @env: The array of strings representing the environment variables.
+ * @is_terminal: Flag indicating whether the shell is running in a terminal.
+ * Return: The exit status of the command.
  */
 int create_fork(char *_shell, char **cmd_tokens, char **env, int is_terminal)
 {
