@@ -45,5 +45,7 @@ write(1, cmd_tokens[0], _strlen(cmd_tokens[0])), write(1, ": not found\n", 12);
 return (0);
 }
 wait(&status);
+if (WIFEXITED(*status))
+	*status = WEXITSTATUS(*status);
 return (1);
 }
