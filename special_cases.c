@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * special_cases - Handles special cases when the program 
+ * special_cases - Handles special cases when the program
  * token is "exit" or "env".
  *
  * @tokens: Tokens from stdin in this program
@@ -19,16 +19,13 @@ int special_cases(char **tokens, char *shell_name, char **environment)
 		if (_strcmp(tokens[0], "exit") == 0)
 		{
 			if (!tokens[1])
-				return 0;
-			else
-			{
-				write(1, shell_name, _strlen(shell_name));
-				write(1, ": sh: 1: exit: Illegal number: ", 31);
-				write(1, tokens[1], _strlen(tokens[1]));
-				write(1, "\n", 1);
+				return (0);
+			write(1, shell_name, _strlen(shell_name));
+			write(1, ": sh: 1: exit: Illegal number: ", 31);
+			write(1, tokens[1], _strlen(tokens[1]));
+			write(1, "\n", 1);
 
-				return (1);
-			}
+			return (1);
 		}
 		if (_strcmp(tokens[0], "env") == 0)
 		{
