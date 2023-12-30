@@ -2,6 +2,7 @@
 
 /**
  * _strcmp - Compares two strings.
+ *
  * @str1: First string to compare
  * @str2: Second string to compare
  * Return: 0 if the strings are the same, otherwise a
@@ -22,7 +23,8 @@ int _strcmp(char *str1, char *str2)
 }
 
 /**
- * _strncmp - Compares n bytes of two strings.
+ * _strncmp - Compares two strings up to a specified number of characters.
+ *
  * @str1: Character string
  * @str2: Character string
  * @n: Number of bytes to compare
