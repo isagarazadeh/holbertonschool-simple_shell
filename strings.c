@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * _strlen - returns the length of a string
+ * _strlen - returns the length of a given string
+ *
  * @str: pointer to string
  * Return: length of the string
  */
@@ -20,6 +21,7 @@ int _strlen(char *str)
 /**
  * _strcpy - function that copies the string pointed to by src,
  * including null byte
+ *
  * @destination: pointer to the destination string
  * @source: pointer to the source string
  * Return: pointer to destination string
@@ -39,6 +41,7 @@ char *_strcpy(char *destination, char *source)
 
 /**
  * _strcat - function that concatenates two strings
+ *
  * @destination: pointer to the destination array
  * @source: pointer to the source array
  * Return: pointer to destination array
