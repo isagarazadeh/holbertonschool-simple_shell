@@ -1,12 +1,14 @@
 #include "main.h"
 
 /**
- * main - Runs the shell.
- * @argc: number of arguments
- * @argv: an array of C-style strings
- * @envp: initialism for parameter
- * Return: Exit status 0
+ * main - Entry point for the shell program.
+ * @argc: Number of command-line arguments.
+ * @argv: Array of C-style strings containing command-line arguments.
+ * @envp: Array of strings representing the program's environment variables.
+ *
+ * Return: Exit status 0 upon successful execution.
  */
+
 int main(__attribute__((unused)) int argc, char **argv, char **envp)
 {
 	size_t buffer_size;
