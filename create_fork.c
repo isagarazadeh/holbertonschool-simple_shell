@@ -33,7 +33,7 @@ cmd_tokens[0] = original_executable_name, free(full_executable_path);
 }
 if (cmd_tokens != NULL && *cmd_tokens != NULL)
 {
-write(1, _shell, _strlen(_shell));
+write(2, _shell, _strlen(_shell));
 if (is_terminal)
 {
 write(1, ": No such file or directory\n", 28);
