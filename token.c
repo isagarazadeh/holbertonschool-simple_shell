@@ -11,7 +11,8 @@
  * str_tokens returns NULL.
  *
  * @input_string: The input string to tokenize
- * Return: NULL-terminated array of pointers to tokens in the 'input_string' string
+ * Return: NULL-terminated array of pointers
+ * to tokens in the 'input_string' string
  * if the malloc call was successful, NULL otherwise
  */
 char **str_tokens(char *input_string)
@@ -22,13 +23,13 @@ char **str_tokens(char *input_string)
 	int tokens_index = 0;
 
 	if (!input_string)
-		return NULL;
+		return (NULL);
 
 	input_length = _strlen(input_string);
 
 	tokens_array = malloc(sizeof(char *) * (input_length + 1));
 	if (!tokens_array)
-		return NULL;
+		return (NULL);
 
 	token = strtok(input_string, " \n");
 	while (token)
